@@ -9,6 +9,8 @@ import { Color } from "@nativescript/core";
 
 const nativeFlashbar = com.andrognito.flashbar.Flashbar;
 const nativeFlashAnime = com.andrognito.flashbar.anim;
+const nativeFlashAnimeBuilder =  com.andrognito.flashbar.anim.FlashAnimIconBuilder;
+// const nativeFlashAnimBarBuilder =  com.andrognito.flashbar.anim.FlashAnimBarBuilder;
 
 export class Flashbar extends Common {
   showBottom(obj) {
@@ -33,21 +35,26 @@ export class Flashbar extends Common {
         })
       )
       .showIcon()
-      .iconColorFilterRes(android.R.color.background_dark)
-      // .iconAnimation(nativeFlashAnime.FlashAnim.with(application.android.foregroundActivity)
-      //         .animateIcon()
-      //         .pulse()
-      //         .alpha()
-      //         .duration(750)
-      //         .accelerate())
+      .icon(android.R.drawable.btn_star)
+      .iconColorFilterRes(android.R.color.background_light)
+      .iconAnimation(new nativeFlashAnimeBuilder(application.android.foregroundActivity)
+                .pulse()
+                .accelerate()  
+              )
       .backgroundColorRes(android.R.color.holo_blue_light)
       .enterAnimation(
         nativeFlashAnime.FlashAnim.with(application.android.foregroundActivity)
           .animateBar()
-          // .duration(750)
+        //   .duration(750)
           .slideFromLeft()
           .overshoot()
-      )
+      ) 
+      // .exitAnimation(new nativeFlashAnimBarBuilder(application.android.foregroundActivity)
+      // .accelerateDecelerate()
+      // .duration(400) 
+      // .animateBar()
+      // )
+      
       .enableSwipeToDismiss()
       .castShadow(true, 4)
       // .vibrateOn(nativeFlashbar.Vibration.SHOW, nativeFlashbar.Vibration.DISMISS)

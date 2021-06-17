@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { Flashbar } from 'nativescript-flashbar';
+import { isAndroid } from "tns-core-modules/platform";
 
 @Component({
     selector: "Home",
@@ -7,8 +8,11 @@ import { Flashbar } from 'nativescript-flashbar';
 })
 export class HomeComponent implements OnInit {
 
+    androidView = isAndroid;
+
     constructor() {
         // Use the component constructor to inject providers.
+        console.log('androidView', this.androidView)
     }
 
     ngOnInit(): void {
@@ -19,7 +23,7 @@ export class HomeComponent implements OnInit {
         const flashbar = new Flashbar();
         const obj = {
             message: 'Bottom Flashbar',
-            duration: 25000,
+            duration: 4000,
             title: 'Plugin on Bottom',
             btnMessage: 'Dismiss'
         }
