@@ -1,0 +1,14 @@
+<ActionBar>
+    <Label text="Flashbar"></Label>
+</ActionBar>
+
+<GridLayout> 
+    <ScrollView>
+    <StackLayout class="-center m-t-30">  
+        <Label text="🔥 Flashbar 🔥" class="text-center" fontSize="40"></Label> 
+        <Button text="Tap me on top" (tap)="showTop()" class="-primary -circle m-t-30"></Button>  
+        <Button *ngIf="androidView" text="Tap me on bottom" (tap)="showBottom()" class="-primary -circle m-t-30"></Button> 
+   
+    </StackLayout> 
+    </ScrollView>
+</GridLayout>

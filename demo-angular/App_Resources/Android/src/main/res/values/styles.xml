@@ -2,7 +2,7 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android">
 
     <!-- theme to use FOR launch screen-->
-    <style name="LaunchScreenThemeBase" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="LaunchScreenThemeBase" parent="Theme.MaterialComponents.DayNight">
         <item name="toolbarStyle">@style/NativeScriptToolbarStyle</item>
 
         <item name="colorPrimary">@color/ns_primary</item>
@@ -13,13 +13,15 @@
 
         <item name="android:windowActionBarOverlay">true</item>
         <item name="android:windowTranslucentStatus">true</item>
+
+         <!-- <item name="buttonStyle">?attr/materialButtonOutlinedStyle</item> -->
     </style>
 
     <style name="LaunchScreenTheme" parent="LaunchScreenThemeBase">
     </style>
 
     <!-- theme to use AFTER launch screen is loaded-->
-    <style name="AppThemeBase" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="AppThemeBase" parent="Theme.MaterialComponents.Light">
         <item name="toolbarStyle">@style/NativeScriptToolbarStyle</item>
 
         <item name="colorPrimary">@color/ns_primary</item>
@@ -39,4 +41,77 @@
 
     <style name="NativeScriptToolbarStyle" parent="NativeScriptToolbarStyleBase">
     </style>
+
+
+
+
+     <!-- theme for button material  -->
+
+       <style name="Widget.MaterialComponents.Button.OutlinedButton" parent="Widget.MaterialComponents.Button.TextButton">
+    <item name="android:paddingLeft">@dimen/mtrl_btn_padding_left</item>
+    <item name="android:paddingRight">@dimen/mtrl_btn_padding_right</item>
+    <item name="strokeColor">@color/mtrl_btn_stroke_color_selector</item>
+    <item name="strokeWidth">@dimen/mtrl_btn_stroke_size</item>
+  </style>
+   <style name="Widget.MaterialComponents.Button.OutlinedButton.Icon">
+    <item name="android:paddingLeft">@dimen/mtrl_btn_icon_btn_padding_left</item>
+  </style>
+
+     <!-- <style name="Widget.App.Button.OutlinedButton.IconOnly" parent="Widget.MaterialComponents.Button.OutlinedButton">
+    <item name="iconPadding">0dp</item>
+    <item name="android:insetTop">0dp</item>
+    <item name="android:insetBottom">0dp</item>
+    <item name="android:paddingLeft">12dp</item>
+    <item name="android:paddingRight">12dp</item>
+    <item name="android:minWidth">48dp</item>
+    <item name="android:minHeight">48dp</item>
+</style> -->
+
+
+
+<!-- <chip
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:chipIcon="@drawable/ic_chip"
+    android:text="@string/text"/> -->
+
+     <style name="Widget.MaterialComponents.Chip.Filter" parent="Widget.MaterialComponents.Chip.Action">
+
+     
+     </style>
+
+  <!-- <style name="Widget.MaterialComponents.Button" parent="Widget.AppCompat.Button">
+    <item name="enforceMaterialTheme">true</item>
+    <item name="android:background">@empty</item>
+    <item name="enforceTextAppearance">true</item>
+    <item name="android:textAppearance">?attr/textAppearanceButton</item>
+    <item name="android:textColor">@color/mtrl_btn_text_color_selector</item>
+    <item name="android:paddingLeft">@dimen/mtrl_btn_padding_left</item>
+    <item name="android:paddingRight">@dimen/mtrl_btn_padding_right</item>
+    <item name="android:paddingTop">@dimen/mtrl_btn_padding_top</item>
+    <item name="android:paddingBottom">@dimen/mtrl_btn_padding_bottom</item>
+    <item name="android:insetLeft">0dp</item>
+    <item name="android:insetRight">0dp</item>
+    <item name="android:insetTop">@dimen/mtrl_btn_inset</item>
+    <item name="android:insetBottom">@dimen/mtrl_btn_inset</item>  
+    <item name="cornerRadius">@null</item>
+    <item name="elevation">@dimen/mtrl_btn_elevation</item>
+    <item name="iconPadding">@dimen/mtrl_btn_icon_padding</item>
+    <item name="iconTint">@color/mtrl_btn_text_color_selector</item>
+    <item name="rippleColor">@color/mtrl_btn_ripple_color</item>
+    <item name="backgroundTint">@color/mtrl_btn_bg_color_selector</item>
+   <item name="textAppearanceButton">@style/TextAppearance.App.Button</item>
+    <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.App.SmallComponent</item>
+  </style>
+ 
+
+<style name="TextAppearance.App.Button" parent="TextAppearance.MaterialComponents.Button">
+    
+</style>
+
+<style name="ShapeAppearance.App.SmallComponent" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+    <item name="cornerFamily">cut</item>
+    <item name="cornerSize">4dp</item>
+</style> -->
+
 </resources>

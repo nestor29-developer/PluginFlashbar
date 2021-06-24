@@ -1,1 +1,4 @@
+
+
 pod 'LNRSimpleNotifications', :git => 'https://github.com/LISNR/LNRSimpleNotifications'
+pod 'MaterialComponents/Cards'

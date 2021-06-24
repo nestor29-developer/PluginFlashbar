@@ -3,11 +3,11 @@
 </ActionBar>
  
 <GridLayout> 
-<ScrollView>
-<StackLayout class="-center m-t-30">  
-    <Label text="🔥 Flashbar 🔥" class="text-center" fontSize="40"></Label> 
-    <Button text="Tap me on top" (tap)="showTop()" class="-primary -circle m-t-30"></Button>  
-    <Button *ngIf="androidView" text="Tap me on bottom" (tap)="showBottom()" class="-primary -circle m-t-30"></Button> 
-</StackLayout> 
-</ScrollView>
+    <ListView [items]="items">
+    <ng-template let-item="item">
+    <StackLayout>
+    <Label [nsRouterLink]="[item.route]" [id]="item.route" [text]="item.name" class="p-15"></Label>
+    </StackLayout>
+    </ng-template>
+    </ListView>
 </GridLayout>

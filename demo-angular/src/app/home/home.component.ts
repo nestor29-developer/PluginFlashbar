@@ -1,6 +1,4 @@
-import { Component, OnInit } from "@angular/core";
-import { Flashbar } from 'nativescript-flashbar';
-import { isAndroid } from "tns-core-modules/platform";
+import { Component, OnInit } from "@angular/core"; 
 
 @Component({
     selector: "Home",
@@ -8,38 +6,25 @@ import { isAndroid } from "tns-core-modules/platform";
 })
 export class HomeComponent implements OnInit {
 
-    androidView = isAndroid;
+
+    items: Array<any> = [
+        {'name':'Flashbar', 'route':'flashbar'},
+        {'name':'Progress Linear', 'route':'progress-indicator'},
+        {'name':'Progress Loader', 'route':'progress-loader'},
+        {'name':'Button', 'route':'button-ui'},
+        {'name':'Card', 'route':'card-ui'},
+        {'name':'Chips', 'route':'chip-ui'},
+
+        ];
 
     constructor() {
-        // Use the component constructor to inject providers.
-        console.log('androidView', this.androidView)
+        // Use the component constructor to inject providers. 
     }
 
     ngOnInit(): void {
         // Init your component properties here.
     }
 
-    showBottom() {
-        const flashbar = new Flashbar();
-        const obj = {
-            message: 'Bottom Flashbar',
-            duration: 4000,
-            title: 'Plugin on Bottom',
-            btnMessage: 'Dismiss'
-        }
-        flashbar.showBottom(obj); 
-    }
-
-    showTop() {
-        const flashbar = new Flashbar();
-        const obj = {
-            message: 'Top Flashbar',
-            duration: 5000,
-            title: 'Plugin on Top',
-            btnMessage: 'Alert Click',
-            yesMessage: 'Yes Sent',
-            noMessage: 'No Sent'
-        }
-        flashbar.showTop(obj); 
-    }
+ 
+  
 }

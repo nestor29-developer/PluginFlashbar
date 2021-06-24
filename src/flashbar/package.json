@@ -1,0 +1,6 @@
+{
+    "name": "flashbar",
+    "main": "flashbar",
+    "types": "index.d.ts"
+
+}
