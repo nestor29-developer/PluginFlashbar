@@ -1,10 +1,10 @@
-import { ChipUICommon } from './chip.common';
+import { Common } from './chip.common';
 
 const card = com.google.android.material.chip;
 
 // const shape = Widget.MaterialComponents.Chip;
 
-export class ChipUI extends ChipUICommon {
+export class ChipUI extends Common {
 
     createNativeView(){  
         let initProgress;    

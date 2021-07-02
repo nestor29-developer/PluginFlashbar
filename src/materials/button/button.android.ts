@@ -1,10 +1,10 @@
-import { ButtonUICommon } from './button.common';
+import { Common } from './button.common';
 
 const button = com.google.android.material.button;
 
 const shape = com.google.android.material.shape;
 
-export class ButtonUI extends ButtonUICommon {
+export class ButtonUI extends Common {
 
     createNativeView(){  
         let initProgress;  

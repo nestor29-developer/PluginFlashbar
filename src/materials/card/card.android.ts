@@ -1,13 +1,12 @@
-import { CardUICommon } from './card.common';
+import { Common } from './card.common'; 
 
-const card = com.google.android.material.card
-
-const shape = com.google.android.material.shape;
-
-export class CardUI extends CardUICommon {
+export class CardUI extends Common {
 
     createNativeView(){  
-        let initProgress;   
+        let initProgress; 
+        const card = com.google.android.material.card;
+        // const shape = com.google.android.material.shape; 
+           
         initProgress = new card.MaterialCardView(this._context)
         initProgress.setCardBackgroundColor(this.colorBrown.android);
         initProgress.setCardElevation(1.5);
@@ -22,8 +21,8 @@ export class CardUI extends CardUICommon {
         initProgress.setCheckable(true);
         initProgress.setChecked(true);
         initProgress.setDragged(true); 
-        return initProgress;
-
+         
+        return initProgress; 
     } 
 
 

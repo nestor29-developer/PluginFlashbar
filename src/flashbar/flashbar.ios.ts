@@ -2,8 +2,7 @@ import { Common } from './flashbar.common';
 
 export class Flashbar extends Common {
 
-    showTop(obj) {
- 
+    showTop(obj) { 
         // var imgPath = NSBundle.mainBundle.pathForResourceOfType("~/img/bcp-logo", "jpeg");
         // var imgUrl = NSURL.fileURLWithPath(imgPath);
         // var imgUrl = NSURL.URLWithString('~/img/bcp-logo-small.jpg'); 

@@ -78,7 +78,7 @@ export class Flashbar extends Common {
     flashbar.show();
   }
 
-  showTop(obj) {
+  showTop(obj) { 
     const flashbar = new nativeFlashbar.Builder(
       application.android.foregroundActivity
     )

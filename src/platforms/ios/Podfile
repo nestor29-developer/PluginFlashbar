@@ -1,4 +1,14 @@
 
-
+# platform :ios, '9.0' 
 pod 'LNRSimpleNotifications', :git => 'https://github.com/LISNR/LNRSimpleNotifications'
 pod 'MaterialComponents/Cards'
+pod 'MaterialComponents/Cards+Theming'
+pod 'MaterialComponents/Chips'
+pod 'MaterialComponents/Buttons'
+pod 'MaterialComponents/schemes/Shape'
+pod 'MaterialComponents/Buttons+Theming'
+pod 'MaterialComponents/TextFields'
+pod 'MaterialComponents/TextFields+Theming'
+pod 'MaterialComponents/ProgressView'
+pod 'MaterialComponents/ActivityIndicator'
+pod 'MaterialComponents/ProgressView+Theming'

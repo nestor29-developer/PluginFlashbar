@@ -1,4 +1,4 @@
-import { CardUICommon } from './card.common';
-export declare class CardUI extends CardUICommon {
+import { Common } from './card.common';
+export declare class CardUI extends Common {
 
 }

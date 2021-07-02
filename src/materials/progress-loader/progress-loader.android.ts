@@ -1,8 +1,8 @@
-import { ProgressLoaderCommon } from './progress-loader.common';
+import { Common } from './progress-loader.common';
 
 const progress = com.google.android.material.progressindicator;
 
-export class ProgressLoader extends ProgressLoaderCommon {
+export class ProgressLoader extends Common {
 
     createNativeView(){ 
         let initProgress;    

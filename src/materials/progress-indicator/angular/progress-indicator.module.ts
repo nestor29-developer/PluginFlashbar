@@ -1,7 +1,7 @@
 import { NgModule } from "@angular/core";
 import { ProgressIndicatorDirective } from "./progress-indicator.directive";
 import { registerElement } from 'nativescript-angular';
-
+import { isAndroid } from "tns-core-modules/platform";
 
 @NgModule({
     declarations: [ProgressIndicatorDirective],
@@ -11,4 +11,6 @@ import { registerElement } from 'nativescript-angular';
 export class ProgressIndicatorModule {
 }
 
-registerElement('ProgressIndicator', () => require('../progress-indicator.android').ProgressIndicator);
+if(isAndroid) registerElement('ProgressIndicator', () => require('../progress-indicator.android').ProgressIndicator);
+else registerElement('ProgressIndicator', () => require('../progress-indicator.ios').ProgressIndicator);
+

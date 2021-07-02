@@ -16,7 +16,7 @@ export class  CardComponent implements OnInit {
 
     ngOnInit(): void { 
         // const progress = new 
-        // Init your component properties here.
+        // Init your component properties here. 
     }
   
 
